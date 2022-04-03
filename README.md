@@ -1,2 +1,2 @@
-# rplace-turkey
-2022 r/place Turkey
+# Ömer CAN
+Github Profili
