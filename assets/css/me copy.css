@@ -99,17 +99,18 @@ a:hover {
     opacity: 1; } }
 
 html {
-  background-color: #301B92; }
+  background-color: #141414; }
 
 body.page-template-page-fullsingle-me {
   height: 100vh;
-  background-color: #301B92;
+  background-color: #141414;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 45px;
   line-height: 60px;
   letter-spacing: -0.5px;
   color: #999999;
+  background-image: url("../../images/background.jpg");
   background-position: center center;
   background-size: cover; }
   body.page-template-page-fullsingle-me p {
