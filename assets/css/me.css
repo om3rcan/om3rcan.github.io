@@ -215,7 +215,8 @@ body.page-template-page-fullsingle-me {
     margin-top: auto; }
     .network ul li {
       display: inline-block;
-      margin-right: 8px; }
+      margin-right: 8px; 
+      color: white;}
       .network ul li a {
         display: inline-block;
         width: 30px;
