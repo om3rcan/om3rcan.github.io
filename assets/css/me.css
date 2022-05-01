@@ -112,7 +112,8 @@ body.page-template-page-fullsingle-me {
   background-size: cover; }
   body.page-template-page-fullsingle-me p {
     margin-bottom: 28px;
-    color: #ffffff; }
+    color: #ffffff; 
+    font-size: 45px;}
     @media (max-width: 800px) {
       body.page-template-page-fullsingle-me p {
         font-size: 32px;
@@ -213,7 +214,8 @@ body.page-template-page-fullsingle-me {
     margin-top: auto; }
     .network ul li {
       display: inline-block;
-      margin-right: 8px; }
+      margin-right: 8px; 
+      font-size: 45px;}
       .network ul li a {
         display: inline-block;
         width: 30px;
