@@ -38,29 +38,31 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body id="fullsingle" class="page-template-page-fullsingle-me">
-	<div id="popup-open" class="popup" bis_skin_checked="1" style="display: block;">
-        <div class="popup-container" bis_skin_checked="1">
-            <div class="popup-left" bis_skin_checked="1">
-                <div class="popup-close" bis_skin_checked="1">
-                    <button style="font-family: Poppins;">X</button>
-                </div>
-                <div class="popup-title" bis_skin_checked="1">
-                    <h1 style="text-align: center; display: block; margin-bottom: 10px; margin-top: 10px; color: #000; font-size: 1;">Künye</h1>
-                    <p><strong style="font-weight: bold; color: #000; font-family: Poppins;">İmtiyaz Sahibi ve Genel Yayın Yönetmeni</strong> <br> Doğuş Özer <br><a style="font-size: 14px" href="mailto:dogus@mhamedya.com" bis_skin_checked="1">dogus@mhamedya.com</a> <br><br>
-                    <strong style="font-weight: bold; color: #000; font-family: Poppins;">Genel Yayın Koordinatörü</strong> <br> Ömer CAN <br><br>
-                    <strong style="font-weight: bold; color: #000; font-family: Poppins;">Ankara Temsilcisi</strong> <br> 0 <br><br>
-                    <strong style="font-weight: bold; color: #000; font-family: Poppins;">Editörler</strong> <br> 1 <br> 2 <br> 3 <br> 4 <br> 5 <br><br>
-                    <strong style="font-weight: bold; color: #000; font-family: Poppins;">Yazılım ve Geliştirme Koordinatörü</strong> <br> Ömer CAN <br> <a style="font-size: 14px" href="mailto:omer@mhamedya.com" bis_skin_checked="1">omer@mhamedya.com</a> <br><br>
-                    <strong style="font-weight: bold; color: #000; font-family: Poppins;">İletişim</strong> <br><a style="font-size: 14px" href="mailto:business@mhamedya.com" bis_skin_checked="1">business@mhamedya.com</a> <br><br><br><br>
-                    <strong style="font-weight: bold; color: #000; font-family: Poppins;">Adres</strong> <br> İstanbul 
-                </p>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="popup-title" bis_skin_checked="1">
+				<h1 style="text-align: center; display: block; margin-bottom: 10px; margin-top: 10px; color: #000; font-size: 1;">Künye</h1>
+				<p><strong style="font-weight: bold; color: #000; font-family: Poppins;">İmtiyaz Sahibi ve Genel Yayın Yönetmeni</strong> <br> Doğuş Özer <br><a style="font-size: 14px" href="mailto:dogus@mhamedya.com" bis_skin_checked="1">dogus@mhamedya.com</a> <br><br>
+				<strong style="font-weight: bold; color: #000; font-family: Poppins;">Genel Yayın Koordinatörü</strong> <br> Ömer CAN <br><br>
+				<strong style="font-weight: bold; color: #000; font-family: Poppins;">Ankara Temsilcisi</strong> <br> 0 <br><br>
+				<strong style="font-weight: bold; color: #000; font-family: Poppins;">Editörler</strong> <br> 1 <br> 2 <br> 3 <br> 4 <br> 5 <br><br>
+				<strong style="font-weight: bold; color: #000; font-family: Poppins;">Yazılım ve Geliştirme Koordinatörü</strong> <br> Ömer CAN <br> <a style="font-size: 14px" href="mailto:omer@mhamedya.com" bis_skin_checked="1">omer@mhamedya.com</a> <br><br>
+				<strong style="font-weight: bold; color: #000; font-family: Poppins;">İletişim</strong> <br><a style="font-size: 14px" href="mailto:business@mhamedya.com" bis_skin_checked="1">business@mhamedya.com</a> <br><br><br><br>
+				<strong style="font-weight: bold; color: #000; font-family: Poppins;">Adres</strong> <br> İstanbul 
+			</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
 	<div class="fs-me">
 
 	<!-- Content Container -->
@@ -83,7 +85,7 @@
 			<ul>
 
 				<li>
-					<a data-open="#popup-open" style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px" href="#">
+					<a data-toggle="modal" data-target=".bd-example-modal-lg" style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px" href="#">
 						Künye
 					</a>
 				</li>
