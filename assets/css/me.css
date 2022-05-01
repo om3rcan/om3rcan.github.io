@@ -530,3 +530,8 @@ body.page-template-page-fullsingle-me.me-video {
           float: none;
       }
   }
+
+  .btn-primary {
+    background-color: #301B92;
+    border: none;  
+} 
