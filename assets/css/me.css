@@ -297,3 +297,236 @@ body.page-template-page-fullsingle-me.me-video {
     height: 100%; }
   body.page-template-page-fullsingle-me.me-video .fs-me {
     background-color: rgba(0, 0, 0, 0.6); }
+
+    .popup{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: rgba(0,0,0,.8);
+      z-index: 9999999;
+      line-height: 0;
+      display: none;
+  }
+  .popup .popup-container{
+      width: 900px;
+      height: 670px;
+      background: #fff;
+      border-radius: 10px;
+      margin: 0 auto;
+      margin-top: 100px;
+      position: relative;
+  }
+  .popup .popup-container .popup-left {
+      padding: 40px;
+  }
+  .popup .popup-container .popup-right {
+      width: 50%;
+      float: right;
+      height: 100%;
+      background: url('assets/img/circir.png') no-repeat;
+      border-top-right-radius: 6px;
+      background-position: 36px -1px;
+      border-bottom-right-radius: 6px;
+      position: relative;
+  }
+  .popup .popup-container .popup-left .popup-close{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+  }
+  .popup .popup-container .popup-left .popup-close button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 36px;
+      border: 1px solid #fff;
+      background: blue;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      transition: 500ms all;
+  }
+  .popup .popup-container .popup-left .popup-close button:hover{
+      color: blue;
+      background: #fff;
+  }
+  .popup .popup-container .popup-right .popup-right-title {
+      width: 60%;
+      margin: 0 auto;
+      margin-left: 120px;
+  }
+  .popup .popup-container .popup-right .popup-right-title h1{
+      font-size: 16px;
+      font-family: 'Santral-Bold', sans-serif;
+      color: #fff;
+      letter-spacing: -0.01em;
+      line-height: 39px;
+      text-align: center;
+      padding-top: 100px;
+      margin-bottom: 30px;
+  }
+  .popup .popup-container .popup-right .popup-right-title p {
+      font-size: 13px;
+      line-height: 23px;
+      font-family: 'Santral-Regular', sans-serif;
+      text-align: center;
+      letter-spacing: -0.01em;
+      color: rgba(255, 255, 255, 0.49);
+      margin-bottom: 50px;
+  }
+  .popup .popup-container .popup-left .popup-title{
+      
+  }
+  .popup .popup-container .popup-left .popup-title p{
+      font-size: 13px;
+      font-family: 'Santral-SemiBold', sans-serif;
+      line-height: 20px;
+      letter-spacing: -0.001em;
+      margin-top: 24px;
+      color: #A8A8A8;
+  }
+  .popup .popup-container .popup-left .popup-form{
+      margin-top: 35px;
+  }
+  .popup .popup-container .popup-left .popup-form .form-w50{
+      float: left;
+      width: 48.6%;
+      margin-right: 10px;
+  }
+  .popup .popup-container .popup-left .popup-form .form-w50:nth-child(2n){
+      margin-right: 0;
+  }
+  .popup .popup-container .popup-left .popup-form .form-w50 .field {
+      position: relative;
+      margin-bottom: 15px;
+      height: 55px;
+  }
+  
+  .popup .popup-container .popup-left .popup-form .form-w50 .field label::before {
+      content: attr(title);
+      position: absolute;
+      top: 17px;
+      font-family: 'Santral-SemiBold', sans-serif;
+      font-size: 13px;
+      letter-spacing: -1px;
+      left: 15px;
+      line-height: 40px;
+      color: #777;
+      transition: 300ms all;
+  }
+  
+  .popup .popup-container .popup-left .popup-form .form-w50 .field input {
+      width: 100%;
+      line-height: 40px;
+      padding: 0 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: #222;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+  }
+  
+  .popup .popup-container .popup-left .popup-form .form-w50 .field input:focus {
+      outline: 0;
+      border-color: blue;
+  }
+  
+  .popup .popup-container .popup-left .popup-form .form-w50 .field input:valid + label::before {
+      line-height: 20px;
+      font-size: 12px;
+      top: 8px;
+      background: #fff;
+      padding: 0 6px;
+      left: 9px;
+      content: attr(data-title);
+  }
+  
+  .popup .popup-container .popup-left .popup-form .form-w50 .field input:focus + label::before {
+      line-height: 20px;
+      font-size: 12px;
+      top: 8px;
+      background: #fff;
+      color: blue;
+      padding: 0 6px;
+      left: 9px;
+  }
+  
+  .popup .popup-container .popup-left .popup-form .form-w100{
+      width: 100%;
+  }
+  
+  .popup .popup-container .popup-left .popup-form .form-w100 select{
+      width: 100%;
+      height: 55px;
+      border: 1px solid #E6E5EA;
+      border-radius: 6px;
+      padding: 0 20px;
+      font-family: 'Santral-SemiBold', sans-serif;
+      font-size: 13px;
+      letter-spacing: -1px;
+      color: #5A6369;
+  }
+  
+  .popup .popup-container .popup-left .popup-form .form-w100 button{
+      width: 100%;
+      height: 55px;
+      color: #fff;
+      background: #201678;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: -1px;
+      font-family: 'Santral-SemiBold', sans-serif;
+      margin-top: 20px;
+      display: block;
+  }
+  @media only screen and (min-width: 100px) and (max-width: 960px){
+      .popup .popup-container{
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          margin-top: 70px;
+          overflow: auto;
+      }
+      .popup .popup-container .popup-right{
+          order: 1;
+          float: none;
+          width: 100%;
+          background: #201678;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+      }
+      .popup .popup-container .popup-right .popup-right-title{
+          width: 100%;
+          margin-left: 0;
+      }
+      .popup .popup-container .popup-right .popup-right-title h1 {
+          padding-top: 40px;
+          margin-bottom: 10px;
+      }
+      .popup .popup-container .popup-right .popup-right-title p{
+          width: 80%;
+          margin: 0 auto;
+      }
+      .popup .popup-container .popup-right .popup-right-title img{
+          margin-top: 20px;
+          max-width: 50%;
+          margin-bottom: 20px;
+      }
+      .popup .popup-container .popup-right .popup-right-title{
+          text-align: center;
+      }
+      .popup .popup-container .popup-left{
+          order: 2;
+          float: none;
+          width: 100%;
+      }
+      .popup .popup-container .popup-left .popup-form .form-w50{
+          width: 100%;
+          float: none;
+      }
+    }
