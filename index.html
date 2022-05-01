@@ -120,6 +120,53 @@
 	</div>
 
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function($){
+            var popupFix = function(e){
+                var height = $('>div', e).height();
+                $('input:first', e).focus();
+            };
+            $('[data-open]').on('click', function(e){
+                $('[data-open]').each(function(){
+                    $($(this).data('open')).hide();
+                });
+                var open = $(this).data('open');
+                $(open).fadeIn(300);
+                popupFix(open);
+                e.preventDefault();
+            });
+            $('[data-close]').on('click', function(e){
+                var close = $(this).data('close');
+                $(close).fadeOut(300);
+                e.preventDefault();
+            });
+            $('[data-open]').each(function(){
+                $($(this).data('open')).on('click', function(e){
+                    return false;
+                });
+                $($(this).data('open') + ' a').on('click', function(){
+                    window.location.href = $(this).attr('href');
+                });
+            });
+            $(window).on('click', function(e){
+                if ( !$(e.target).is('[data-open]') && !$(e.target).parents('[data-open]').length > 0 ){
+                    $('[data-open]').each(function(){
+                        $($(this).data('open')).hide();
+                    });
+                }
+            });
+            $('body').on('keyup', function(e){
+                if ( e.keyCode == 27 ){
+                    $('.popup').fadeOut(300);
+                }
+            });
+            $('.popup-close button').on('click', function(e){
+                $('.popup').hide();
+                e.preventDefault();
+            });
+        });
+        </script>
 
 </body>
 </html>
