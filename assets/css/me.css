@@ -535,3 +535,9 @@ body.page-template-page-fullsingle-me.me-video {
     background-color: #301B92;
     border: none;  
 } 
+
+.btn-link {
+  font-weight: 400;
+  color: #fff !important;
+  text-decoration: none;
+}
