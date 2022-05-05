@@ -90,127 +90,12 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-		aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<iframe id="JotFormIFrame-221242648909965" title="MHA Reklam Başvurusu"
-					onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true"
-					allow="geolocation; microphone; camera" src="https://form.jotform.com/221242648909965"
-					frameborder="0" style="min-width: 100%; height:539px; border:none;" scrolling="no">
-				</iframe>
-				<script type="text/javascript">
-					var ifr = document.getElementById("JotFormIFrame-221242648909965");
-					if (ifr) {
-						var src = ifr.src;
-						var iframeParams = [];
-						if (window.location.href && window.location.href.indexOf("?") > -1) {
-							iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1)
-								.split('&'));
-						}
-						if (src && src.indexOf("?") > -1) {
-							iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-							src = src.substr(0, src.indexOf("?"))
-						}
-						iframeParams.push("isIframeEmbed=1");
-						ifr.src = src + "?" + iframeParams.join('&');
-					}
-					window.handleIFrameMessage = function (e) {
-						if (typeof e.data === 'object') {
-							return;
-						}
-						var args = e.data.split(":");
-						if (args.length > 2) {
-							iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]);
-						} else {
-							iframe = document.getElementById("JotFormIFrame");
-						}
-						if (!iframe) {
-							return;
-						}
-						switch (args[0]) {
-							case "scrollIntoView":
-								iframe.scrollIntoView();
-								break;
-							case "setHeight":
-								iframe.style.height = args[1] + "px";
-								break;
-							case "collapseErrorPage":
-								if (iframe.clientHeight > window.innerHeight) {
-									iframe.style.height = window.innerHeight + "px";
-								}
-								break;
-							case "reloadPage":
-								window.location.reload();
-								break;
-							case "loadScript":
-								if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) {
-									break;
-								}
-								var src = args[1];
-								if (args.length > 3) {
-									src = args[1] + ':' + args[2];
-								}
-								var script = document.createElement('script');
-								script.src = src;
-								script.type = 'text/javascript';
-								document.body.appendChild(script);
-								break;
-							case "exitFullscreen":
-								if (window.document.exitFullscreen) window.document.exitFullscreen();
-								else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
-								else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
-								else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
-								else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
-								break;
-						}
-						var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-						if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-							var urls = {
-								"docurl": encodeURIComponent(document.URL),
-								"referrer": encodeURIComponent(document.referrer)
-							};
-							iframe.contentWindow.postMessage(JSON.stringify({
-								"type": "urls",
-								"value": urls
-							}), "*");
-						}
-					};
-					window.isPermitted = function (originUrl, whitelisted_domains) {
-						var url = document.createElement('a');
-						url.href = originUrl;
-						var hostname = url.hostname;
-						var result = false;
-						if (typeof hostname !== 'undefined') {
-							whitelisted_domains.forEach(function (element) {
-								if (hostname.slice((-1 * element.length - 1)) === '.'.concat(element) || hostname ===
-									element) {
-									result = true;
-								}
-							});
-							return result;
-						}
-					};
-					if (window.addEventListener) {
-						window.addEventListener("message", handleIFrameMessage, false);
-					} else if (window.attachEvent) {
-						window.attachEvent("onmessage", handleIFrameMessage);
-					}
-				</script>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Kapat</button>
-			</div>
-		</div>
-	</div>
-
 	<div class="modal fade" id="tekliflerModal" tabindex="-1" role="dialog" aria-labelledby="tekliflerModalTitle"
 		aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="tekliflerModalLongTitle">Teklifler</h5>
+					<h5 class="modal-title" id="tekliflerModalLongTitle">Bizimle İletişime Geç</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -218,11 +103,12 @@
 				<div class="modal-body">
 					<div class="accordion" id="accordionExample">
 						<div class="card">
-							<div class="card-header" id="headingOne" bis_skin_checked="1" style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
+							<div class="card-header" id="headingOne" bis_skin_checked="1"
+								style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
 								<h2 class="mb-0">
 									<button class="btn btn-link" type="button" data-toggle="collapse"
 										data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-										Haber Gönder
+										Talep Formu
 									</button>
 								</h2>
 							</div>
@@ -230,102 +116,123 @@
 							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
 								data-parent="#accordionExample">
 								<div class="card-body">
-									...
+									<iframe id="JotFormIFrame-221245826910049" title="MHA Talep Formu"
+										onload="window.parent.scrollTo(0,0)" allowtransparency="true"
+										allowfullscreen="true" allow="geolocation; microphone; camera"
+										src="https://form.jotform.com/221245826910049" frameborder="0" style="min-width: 100%; height:539px; border:none;" scrolling="no">
+									</iframe>
+									<script type="text/javascript">
+										var ifr = document.getElementById("JotFormIFrame-221245826910049");
+										if (ifr) {
+											var src = ifr.src;
+											var iframeParams = [];
+											if (window.location.href && window.location.href.indexOf("?") > -1) {
+												iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1)
+													.split('&'));
+											}
+											if (src && src.indexOf("?") > -1) {
+												iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+												src = src.substr(0, src.indexOf("?"))
+											}
+											iframeParams.push("isIframeEmbed=1");
+											ifr.src = src + "?" + iframeParams.join('&');
+										}
+										window.handleIFrameMessage = function (e) {
+											if (typeof e.data === 'object') {
+												return;
+											}
+											var args = e.data.split(":");
+											if (args.length > 2) {
+												iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]);
+											} else {
+												iframe = document.getElementById("JotFormIFrame");
+											}
+											if (!iframe) {
+												return;
+											}
+											switch (args[0]) {
+												case "scrollIntoView":
+													iframe.scrollIntoView();
+													break;
+												case "setHeight":
+													iframe.style.height = args[1] + "px";
+													break;
+												case "collapseErrorPage":
+													if (iframe.clientHeight > window.innerHeight) {
+														iframe.style.height = window.innerHeight + "px";
+													}
+													break;
+												case "reloadPage":
+													window.location.reload();
+													break;
+												case "loadScript":
+													if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) {
+														break;
+													}
+													var src = args[1];
+													if (args.length > 3) {
+														src = args[1] + ':' + args[2];
+													}
+													var script = document.createElement('script');
+													script.src = src;
+													script.type = 'text/javascript';
+													document.body.appendChild(script);
+													break;
+												case "exitFullscreen":
+													if (window.document.exitFullscreen) window.document.exitFullscreen();
+													else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
+													else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
+													else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
+													else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
+													break;
+											}
+											var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+											if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+												var urls = {
+													"docurl": encodeURIComponent(document.URL),
+													"referrer": encodeURIComponent(document.referrer)
+												};
+												iframe.contentWindow.postMessage(JSON.stringify({
+													"type": "urls",
+													"value": urls
+												}), "*");
+											}
+										};
+										window.isPermitted = function (originUrl, whitelisted_domains) {
+											var url = document.createElement('a');
+											url.href = originUrl;
+											var hostname = url.hostname;
+											var result = false;
+											if (typeof hostname !== 'undefined') {
+												whitelisted_domains.forEach(function (element) {
+													if (hostname.slice((-1 * element.length - 1)) === '.'.concat(element) || hostname ===
+														element) {
+														result = true;
+													}
+												});
+												return result;
+											}
+										};
+										if (window.addEventListener) {
+											window.addEventListener("message", handleIFrameMessage, false);
+										} else if (window.attachEvent) {
+											window.attachEvent("onmessage", handleIFrameMessage);
+										}
+									</script>
 								</div>
 							</div>
 						</div>
 						<div class="card">
-							<div class="card-header" id="headingTwo" bis_skin_checked="1" style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
+							<div class="card-header" id="headingTwo" bis_skin_checked="1"
+								style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
 								<h2 class="mb-0">
 									<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
 										data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										İhlal Bildir
+										Eklenecek...
 									</button>
 								</h2>
 							</div>
 							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-								data-parent="#accordionExample">
-								<div class="card-body">
-									...
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header" id="headingThree" bis_skin_checked="1" style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
-								<h2 class="mb-0">
-									<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-										data-target="#collapseThree" aria-expanded="false"
-										aria-controls="collapseThree">
-										Partnerlik Talebi
-									</button>
-								</h2>
-							</div>
-							<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-								data-parent="#accordionExample">
-								<div class="card-body">
-									...
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header" id="headingFour" bis_skin_checked="1" style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
-								<h2 class="mb-0">
-									<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-										data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-										Reklam Ortaklığı
-									</button>
-								</h2>
-							</div>
-							<div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-								data-parent="#accordionExample">
-								<div class="card-body">
-									...
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header" id="headingFive" bis_skin_checked="1" style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
-								<h2 class="mb-0">
-									<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-										data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-										Medya İçerik Desteği
-									</button>
-								</h2>
-							</div>
-							<div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-								data-parent="#accordionExample">
-								<div class="card-body">
-									...
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header" id="headingSix" bis_skin_checked="1" style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
-								<h2 class="mb-0">
-									<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-										data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-										Halkla İlişkiler Desteği
-									</button>
-								</h2>
-							</div>
-							<div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-								data-parent="#accordionExample">
-								<div class="card-body">
-									...
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header" id="headingSeven" bis_skin_checked="1" style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
-								<h2 class="mb-0">
-									<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-										data-target="#collapseSeven" aria-expanded="false"
-										aria-controls="collapseSeven">
-										Diğer
-									</button>
-								</h2>
-							</div>
-							<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
 								data-parent="#accordionExample">
 								<div class="card-body">
 									...
@@ -373,7 +280,7 @@
 						<a data-toggle="modal" data-target="#tekliflerModal"
 							style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
 							href="#">
-							Teklifler
+							Bizimle İletişime Geç
 						</a>
 					</li>
 
