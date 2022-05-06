@@ -119,7 +119,8 @@
 									<iframe id="JotFormIFrame-221245826910049" title="MHA Talep Formu"
 										onload="window.parent.scrollTo(0,0)" allowtransparency="true"
 										allowfullscreen="true" allow="geolocation; microphone; camera"
-										src="https://form.jotform.com/221245826910049" frameborder="0" style="min-width: 100%; height:539px; border:none;" scrolling="no">
+										src="https://form.jotform.com/221245826910049" frameborder="0"
+										style="min-width: 100%; height:539px; border:none;" scrolling="no">
 									</iframe>
 									<script type="text/javascript">
 										var ifr = document.getElementById("JotFormIFrame-221245826910049");
@@ -247,6 +248,57 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" id="istatistiklerModal" role="dialog" aria-labelledby="istatistiklerModalTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="istatiklerModalTitle">İstatistikler</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="accordion" id="accordionIstatistik">
+					<div class="card">
+						<div class="card-header" id="headingThree" bis_skin_checked="1"
+							style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
+							<h2 class="mb-0">
+								<button class="btn btn-link" type="button" data-toggle="collapse"
+									data-target="#collapseInstagram" aria-expanded="true" aria-controls="collapseInstagram">
+									Instagram
+								</button>
+							</h2>
+						</div>
+
+						<div id="collapseInstagram" class="collapse show" aria-labelledby="headingThree"
+							data-parent="#accordionIstatistik">
+							<div class="card-body">
+								...
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingFour" bis_skin_checked="1"
+							style="background-image: linear-gradient(45deg, rgba( 0, 0, 0, 0.62), rgba( 48, 27, 146, 0.58)), url(images/teklifBG.png); border-left: 5px solid mediumpurple;">
+							<h2 class="mb-0">
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+									data-target="#collapseFacebook" aria-expanded="false" aria-controls="collapseFacebook">
+									Facebook
+								</button>
+							</h2>
+						</div>
+						<div id="collapseFacebook" class="collapse" aria-labelledby="headingFour"
+							data-parent="#accordionIstatistik">
+							<div class="card-body">
+								...
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
 	<div class="fs-me">
 
 		<!-- Content Container -->
@@ -285,7 +337,7 @@
 					</li>
 
 					<li>
-						<a style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
+						<a data-toggle="modal" data-target="#istatistiklerModal" style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
 							href="#">
 							İstatistikler
 						</a>
