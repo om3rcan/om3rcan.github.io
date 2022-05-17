@@ -313,160 +313,154 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<table class="table">
-						<thead class="thead-dark">
-							<tr>
-								<th scope="col">Banka Adı</th>
-								<th scope="col">Ziraat Bankası</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">Şube (Şube Kodu)</th>
-								<td>Mark</td>
-							</tr>
-							<tr>
-								<th scope="row">Hesap Numarası</th>
-								<td>Jacob</td>
-							</tr>
-							<tr>
-								<th scope="row">IBAN Numarası</th>
-								<td>Larry
-									<button type="button" class="btn btn-primary">Kopyala</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<table class="table">
-						<thead class="thead-light">
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">First</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Larry</td>
-								<td>the Bird</td>
-								<td>@twitter</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="table-responsive">
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">Banka Adı</th>
+									<th scope="col">Ziraat Bankası</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Şube (Şube Kodu)</th>
+									<td>Isparta ( Kodu : 5001 )</td>
+								</tr>
+								<tr>
+									<th scope="row">Hesap Numarası</th>
+									<td>132-85759736-5001</td>
+								</tr>
+								<tr>
+									<th scope="row">IBAN Numarası</th>
+									<td>
+										<input type="text" class="border-0" value="TR070001000132857597365001"
+											id="myInput" disabled="disabled">
+										<button type="button" class="btn btn-primary"
+											onclick="myFunction()">Kopyala</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
+				<script type="text/javascript">
+					// <![CDATA[
+					function myFunction() {
+						var copyText = document.getElementById("myInput");
+						copyText.select();
+						copyText.setSelectionRange(0, 99999);
+						navigator.clipboard.writeText(copyText.value);
+						alert("IBAN Adresi Kopyalandı");
+					}
+				</script>
 			</div>
 		</div>
 	</div>
 
-	<div class="fs-me">
+	<div style="float:left;width:40%;">
+		<div class="fs-me">
 
-		<!-- Content Container -->
-		<div class="me-content">
+			<!-- Content Container -->
+			<div class="me-content">
 
-			<div class="logo">
+				<div class="logo">
 
-				<img src="images/logo.png" alt="Logo" href="#" />
+					<img src="images/logo.png" alt="Logo" href="#" />
+
+				</div>
+
+				<div class="bio">
+
+					<p>Dinamik, Objektif ve Yapıcı.</p>
+
+				</div>
+
+				<div class="network">
+
+					<ul>
+
+						<li>
+							<a data-toggle="modal" data-target="#exampleModalCenter"
+								style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
+								href="#">
+								Künye
+							</a>
+						</li>
+
+						<li>
+							<a data-toggle="modal" data-target="#tekliflerModal"
+								style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
+								href="#">
+								Bizimle İletişime Geç
+							</a>
+						</li>
+
+						<li>
+							<a data-toggle="modal" data-target="#istatistiklerModal"
+								style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
+								href="#">
+								İstatistikler
+							</a>
+						</li>
+
+						<li>
+							<a data-toggle="modal" data-target="#bagisModal"
+								style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
+								href="#">
+								Bağışta Bulun
+							</a>
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="network">
+					<ul>
+						<li>
+							<a href="https://facebook.com/habermha"><i class="fa-brands fa-facebook fa-2xs"
+									style="color: white; font-size: 30px;"></i></a>
+						</li>
+
+						<li>
+							<a href="https://instagram.com/habermha"><i class="fa-brands fa-instagram fa-2xs"
+									style="color: white; font-size: 30px;"></i></a>
+						</li>
+
+						<li>
+							<a href="https://twitter.com/mhacomtr"><i class="fa-brands fa-twitter fa-2xs"
+									style="color: white; font-size: 30px;"></i></a>
+						</li>
+
+						<li>
+							<a href="https://t.me/mahluklarcomtr"><i class="fa-brands fa-telegram fa-2xs"
+									style="color: white; font-size: 30px;"></i></a>
+						</li>
+
+						<li>
+							<a href="https://discord.gg/UA4hFK66mH"><i class="fa-brands fa-discord fa-2xs"
+									style="color: white; font-size: 30px;"></i></a>
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="credit">
+
+					<p class="copyright">&copy; 2022 MHA <a href="#">| Tüm hakları saklıdır.</a></p>
+
+				</div>
+
 
 			</div>
-
-			<div class="bio">
-
-				<p>Dinamik, Objektif ve Yapıcı.</p>
-
-			</div>
-
-			<div class="network">
-
-				<ul>
-
-					<li>
-						<a data-toggle="modal" data-target="#exampleModalCenter"
-							style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
-							href="#">
-							Künye
-						</a>
-					</li>
-
-					<li>
-						<a data-toggle="modal" data-target="#tekliflerModal"
-							style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
-							href="#">
-							Bizimle İletişime Geç
-						</a>
-					</li>
-
-					<li>
-						<a data-toggle="modal" data-target="#istatistiklerModal"
-							style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
-							href="#">
-							İstatistikler
-						</a>
-					</li>
-
-					<li>
-						<a data-toggle="modal" data-target="#bagisModal"
-							style="display: flex; justify-content: center; align-items: center; width: auto; height: 16px; font-size: 14px; color: #fff; position: relative; top: -10px"
-							href="#">
-							Bağışta Bulun
-						</a>
-					</li>
-				</ul>
-
-			</div>
-
-			<div class="network">
-				<ul>
-					<li>
-						<a href="https://facebook.com/habermha"><i class="fa-brands fa-facebook fa-2xs"
-								style="color: white; font-size: 30px;"></i></a>
-					</li>
-
-					<li>
-						<a href="https://instagram.com/habermha"><i class="fa-brands fa-instagram fa-2xs"
-								style="color: white; font-size: 30px;"></i></a>
-					</li>
-
-					<li>
-						<a href="https://twitter.com/mhacomtr"><i class="fa-brands fa-twitter fa-2xs"
-								style="color: white; font-size: 30px;"></i></a>
-					</li>
-
-					<li>
-						<a href="https://t.me/mahluklarcomtr"><i class="fa-brands fa-telegram fa-2xs"
-								style="color: white; font-size: 30px;"></i></a>
-					</li>
-
-					<li>
-						<a href="https://discord.gg/UA4hFK66mH"><i class="fa-brands fa-discord fa-2xs"
-								style="color: white; font-size: 30px;"></i></a>
-					</li>
-				</ul>
-			</div>
-
-
-			<div class="credit">
-
-				<p class="copyright">&copy; 2022 MHA <a href="#">| Tüm hakları saklıdır.</a></p>
-
-			</div>
-
 
 		</div>
-
 	</div>
+	<div style="float:right;">
+		<a class="twitter-timeline" data-lang="tr" data-width="600" data-height="600" data-theme="dark" href="https://twitter.com/mhacomtr?ref_src=twsrc%5Etfw">Tweets by mhacomtr</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+	<div style="clear:both;"></div>
+
+
 	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

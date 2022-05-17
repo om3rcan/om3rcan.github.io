@@ -541,3 +541,8 @@ body.page-template-page-fullsingle-me.me-video {
   color: #fff !important;
   text-decoration: none;
 }
+
+.responsiveBank {
+  width: 100%;
+  height: auto;
+}
